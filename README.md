@@ -13,6 +13,7 @@ Making your code better, one test at a time.
 * Initialize an npm project inside the cloned repo with `npm init -y`
 * Install Jest as a development dependency `npm install -D jest`
 * Modify the `test` script in `package.json`. To be `test: "jest"`
+* Inspect the provided JavaScript functions.
 * Create two files `objectFunctions.test.js` and `labFunctions.test.js`. 
 * Read the function description and the tests suggestions in the function's comments. 
 * For each function write tests that verify the given function works as expected. Make sure to test with a few different inputs and `expect` the desired output
