@@ -19,5 +19,7 @@ Making your code better, one test at a time.
 * Group function's tests in `describe()` blocks. One `describe` block per function.
 * Run your tests with `npm test`
 
+**Note**: If you find any mistakes in the code provided, fix it.
+
 ## Submission
 Submit a pull request to this repo.
