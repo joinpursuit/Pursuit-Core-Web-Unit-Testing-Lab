@@ -16,7 +16,8 @@
 // "hi"  => false
 
 function isOdd(num) {
-  return num % 2 === 1
+  if (typeof num === 'number') return num % 2 === 1
+  return false
 }
 
 // 2.
@@ -26,7 +27,12 @@ function isOdd(num) {
 // * That verify that for different inputs this function's return value is correct 
 
 function numberOfDigits(num) {
-  return num.toString().length
+  if (typeof num === 'number') {
+    const str = num.toString().length
+    if (num.toString()[0] === '-') return str - 1
+    return str
+  }
+  return null
 }
 
 // 3.
@@ -37,6 +43,7 @@ function numberOfDigits(num) {
 // * That verify that for different inputs this function's return value is correct 
 
 function disemvowel(str) {
+  if (typeof str !== 'string') return null
   let outputStr = ""
   for (let char of str) {
     const lowercasedChar = char.toLowerCase()
@@ -54,9 +61,11 @@ function disemvowel(str) {
 // * That verify that for different inputs this function's return value is correct 
 
 function secondSmallest(arr) {
-  let min = Infinity
-  let secondSmallest = Infinity
+  if (!(arr instanceof Array) || arr.length < 2) return null
+  let min = arr[0]
+  let secondSmallest = min
   for (let num of arr) {
+    if (typeof num !== 'number') return null
     if (num < min) {
       let temp = min
       min = num
@@ -137,6 +146,7 @@ n2.next = n3
 module.exports = {
   isOdd,
   numberOfDigits,
+  disemvowel,
   secondSmallest,
   getLocations,
   onlyOddStrings,
